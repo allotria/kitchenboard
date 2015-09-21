@@ -5,6 +5,8 @@ DashingContrib.configure
 
 configure do
   set :auth_token, '81065ff7c938d2c726309f38a33106a5'
+  set :default_dashboard, 'kitchenboard' #<==== set default dashboard like this
+
 
   helpers do
     def protected!

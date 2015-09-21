@@ -6,8 +6,12 @@ forecast_api_key = "910a008072d229929fc84e8d5857b099"
 
 # Latitude, Longitude for location
 # Stockholm
-forecast_location_lat = "59.32922"
-forecast_location_long = "18.06866"
+# forecast_location_lat = "59.32922"
+# forecast_location_long = "18.06866"
+
+# Home, Eskilstuna
+forecast_location_lat = "59.368939"
+forecast_location_long = "16.491008"
 
 
 # Unit Format
