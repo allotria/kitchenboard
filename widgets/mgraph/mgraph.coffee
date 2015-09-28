@@ -4,7 +4,7 @@ class Dashing.Mgraph extends Dashing.Widget
     return @get('displayedValue') if @get('displayedValue')
     points = @get('points')
     if points
-      points[0][points[0].length - 1].y + ' / ' + points[1][points[1].length - 1].y 
+      points[0][points[0].length - 1].y + '°C / ' + points[1][points[1].length - 1].y + '%'
 
   ready: ->
     container = $(@node).parent()
@@ -15,16 +15,20 @@ class Dashing.Mgraph extends Dashing.Widget
       element: @node
       width: width
       height: height
-      renderer: 'area'
+      renderer: 'multi'
       stroke: false
       series: [
         {
-        color: "#fff",
-        data: [{x:0, y:0}]
+          name: 'Temp'
+          color: "#fff",
+          data: [{x:0, y:0}]
+          renderer: 'line'
         },
         {
-            color: "#222",
-            data: [{x:0, y:0}]
+          name: 'Hum'
+          color: "#222",
+          data: [{x:0, y:0}]
+          renderer: 'stack'
         }
       ]
     )
@@ -32,7 +36,7 @@ class Dashing.Mgraph extends Dashing.Widget
     @graph.series[0].data = @get('points') if @get('points')
 
     x_axis = new Rickshaw.Graph.Axis.Time(graph: @graph)
-    y_axis = new Rickshaw.Graph.Axis.Y(graph: @graph, tickFormat: Rickshaw.Fixtures.Number.formatKMBT)
+#    y_axis = new Rickshaw.Graph.Axis.Y(graph: @graph, tickFormat: Rickshaw.Fixtures.Number.formatKMBT)
     @graph.renderer.unstack = true
     @graph.render()
 
