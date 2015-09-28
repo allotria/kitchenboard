@@ -41,7 +41,9 @@ SCHEDULER.every '5s', :first_in => 0 do |job|
   last_x += 1
   tempValues << { x: last_x, y: temp }         # this is where you'd add a data element for graph 1
   humValues << { x: last_x, y: hum }         # this is where you'd add a data element for graph 2
-  send_event('tempHum1', points: [tempValues, humValues])
+  # send_event('tempHum1', points: [tempValues, humValues])
+  send_event('mygaugeTemp', current: temp.to_f)
+  send_event('mygaugeHum', current: hum.to_f)
   send_event('drinnenTemp', points: tempValues)
   send_event('drinnenHum', { value: hum })
 end
