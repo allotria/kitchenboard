@@ -2,7 +2,7 @@
     $(function() {
         // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
 //        Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
-        Dashing.widget_base_dimensions = [250, 215]
+        Dashing.widget_base_dimensions = [250, 218]
         Dashing.numColumns = 3
     });
 </script>
@@ -16,7 +16,7 @@
 <div class="gridster">
   <ul>
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-view="Clock"></div>
+          <div data-view="Switcherclock" data-back="http://localhost:3030/light" data-forward="http://localhost:3030/light"></div>
       </li>
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
           <div data-id="forecast" data-view="Forecast" data-widget_title="<img src='http://forecast.io/favicon.ico' />Stockholm"></div>
@@ -35,7 +35,7 @@
       </li>
 
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-id="iframeId1" data-view="Iframe" data-width="258" data-height="220" data-url="https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=220&wkst=2&hl=de&bgcolor=%23000000&src=allotria%40gmail.com&color=%2329527A&src=andrea.stadelmann%40gmail.com&color=%231B887A&src=en.swedish%23holiday%40group.v.calendar.google.com&color=%2329527A&ctz=Europe%2FStockholm"></div>
+          <div data-id="iframeId1" data-view="Iframe" data-width="250" data-height="218" data-url="https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=220&wkst=2&hl=de&bgcolor=%23000000&src=allotria%40gmail.com&color=%2329527A&src=andrea.stadelmann%40gmail.com&color=%231B887A&src=en.swedish%23holiday%40group.v.calendar.google.com&color=%2329527A&ctz=Europe%2FStockholm"></div>
       </li>
 
 

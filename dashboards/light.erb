@@ -1,0 +1,27 @@
+<script type='text/javascript'>
+    $(function() {
+        // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+//        Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
+        Dashing.widget_base_dimensions = [250, 218]
+        Dashing.numColumns = 3
+    });
+</script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.load("visualization", "1", {packages:["gauge"]});
+</script>
+
+<% content_for :title do %>Kitchenboard<% end %>
+<div class="gridster">
+  <ul>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+          <div data-view="Switcherclock" data-back="http://localhost:3030/kitchenboard" data-forward="http://localhost:3030/kitchenboard"></div>
+      </li>
+
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+          <div data-view="Text" data-text="WZ 1"></div>
+      </li>
+
+  </ul>
+</div>

@@ -12,7 +12,7 @@ humValues = []
 end
 last_x = tempValues.last[:x]
 
-SCHEDULER.every '5s', :first_in => 0 do |job|
+SCHEDULER.every '1m', :first_in => 0 do |job|
   http = Net::HTTP.new("localhost", 8080)
   http.use_ssl = false
   response = http.request(Net::HTTP::Get.new("/json/sensor/info?key=#{tellprox_api_key}&id=#{tellprox_sensor_id}"))
