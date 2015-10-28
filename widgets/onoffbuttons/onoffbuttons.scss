@@ -1,0 +1,46 @@
+// ----------------------------------------------------------------------------
+// Widget styles
+// ----------------------------------------------------------------------------
+.widget-onoffbuttons {
+
+  background-color: #444 !important;
+  position: relative;
+
+  .title {
+    //position: relative;
+    //top: 30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color: #fff;
+    margin-bottom: 120px;
+    margin-top: 0px;
+  }
+
+  .lightbulb-icon {
+    position: absolute;
+    bottom: 40px;
+    font-size: 100px;
+
+
+    &.on {
+      right: 30px;
+      color: #fffa00;
+      i {
+        padding-top: 10px;
+        padding-left: 30px;
+      }
+    }
+
+    &.off {
+      left: 30px;
+      color: #888888;
+      i {
+        padding-top: 10px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+}

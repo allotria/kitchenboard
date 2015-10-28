@@ -18,23 +18,21 @@
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
           <div data-view="Switcherclock" data-back="http://localhost:3030/system" data-forward="http://localhost:3030/light"></div>
       </li>
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <li data-row="1" data-col="2" data-sizex="1" data-sizey="2">
           <div data-id="forecast" data-view="Forecast" data-widget_title="<img src='http://forecast.io/favicon.ico' />Stockholm"></div>
       </li>
-      <!--<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">-->
-          <!--<div data-id="tempHum1" data-view="Mgraph" data-title="Drinnen" style="background-color:#ffa618"></div>-->
-      <!--</li>-->
-      <!--<li data-switcher-interval="5000" data-row="1" data-col="1" data-sizex="1" data-sizey="1">-->
-          <!--<div data-id="drinnenTemp" data-view="Graph" data-title="Temperatur"></div>-->
-          <!--<div data-id="drinnenHum" data-view="Meter" data-title="rel Feuchtigkeit" data-min="20" data-max="60"></div>-->
-      <!--</li>-->
 
-      <li data-switcher-interval="5000" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-graphtype="line" data-id="drinnenTemp" data-view="Graph" data-title="Temperatur"></div>
-          <div data-id="mygaugeHum" data-view="GoogleGauge"  data-title="% rel" data-min="0" data-max="100" data-green_from="40" data-green_to="60"></div>
+      <li data-switcher-interval="5000" data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+          <div data-graphtype="line" data-id="drinnenTemp" data-view="Graph" data-title="Innen (°C)"></div>
+          <div data-id="drinnenHum" data-view="GoogleGauge"  data-title="% rel" data-min="0" data-max="100" data-green_from="40" data-green_to="60"></div>
       </li>
 
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <li data-switcher-interval="5000" data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+          <div data-graphtype="line" data-id="draussenTemp" data-view="Graph" data-title="Aussen (°C)"></div>
+          <div data-id="draussenHum" data-view="GoogleGauge"  data-title="% rel" data-min="0" data-max="100"></div>
+      </li>
+
+      <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
           <div data-id="iframeId1" data-view="Iframe" data-width="250" data-height="218" data-url="https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=220&wkst=2&hl=de&bgcolor=%23000000&src=allotria%40gmail.com&color=%2329527A&src=andrea.stadelmann%40gmail.com&color=%231B887A&src=en.swedish%23holiday%40group.v.calendar.google.com&color=%2329527A&ctz=Europe%2FStockholm"></div>
       </li>
 
