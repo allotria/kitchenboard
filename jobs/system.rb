@@ -7,7 +7,7 @@ get '/functions/halt' do
     send_event('systemText', "{ 'text': '#{stdout.gets}' }")
   end
 
-  stderr
+  'Halting' unless stderr.gets
 end
 
 get '/functions/reboot' do
@@ -16,7 +16,7 @@ get '/functions/reboot' do
     send_event('systemText', "{ 'text': '#{stdout.gets}' }")
   end
 
-  stderr
+  'Rebooting' unless stderr.gets
 end
 
 SCHEDULER.every '10m', :first_in => 0 do |job|
