@@ -16,11 +16,15 @@
 <div class="gridster">
   <ul>
       <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-view="Switcherclock" data-back="http://localhost:3030/kitchenboard" data-forward="http://localhost:3030/system"></div>
+          <div data-view="Switcherclock" data-back="http://localhost:3030/light" data-forward="http://localhost:3030/kitchenboard"></div>
       </li>
 
-      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-view="Text" data-text="WZ 1"></div>
+      <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+          <div data-id="haltButton" data-view="Halt" data-title="Halt System"></div>
+      </li>
+
+      <li data-row="1" data-col="2" data-sizex="2" data-sizey="2">
+          <div data-id="systemText" data-view="Text" data-title="System Information" data-text="loading..." style="background-color:#48ff80"></div>
       </li>
 
   </ul>

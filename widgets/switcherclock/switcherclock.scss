@@ -1,0 +1,50 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+//$background-color: #1f411c;
+$background-color: #FFA618;
+
+// ----------------------------------------------------------------------------
+// Widget-clock styles
+// ----------------------------------------------------------------------------
+.widget-switcherclock {
+
+  background-color: $background-color;
+
+  h1 {
+    font-size:+2.5em;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+  }
+  h2 {
+    font-size: 25px !important;
+  }
+
+  h2 {
+    font-size:+4em;
+    text-shadow:
+     -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+     1px 1px 0 #000;
+  }
+
+  a {
+    font-size:+1.5em;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  }
+
+  .second-time {
+    font-size:+3em;
+  }
+  .third-time {
+    font-size:+2em;
+  }
+}
