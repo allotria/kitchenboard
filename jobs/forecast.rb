@@ -2,7 +2,7 @@ require 'net/https'
 require 'json'
 
 # Forecast API Key from https://developer.forecast.io
-forecast_api_key = "910a008072d229929fc84e8d5857b099"
+forecast_api_key = KitchenKeys::FORECAST_API_KEY
 
 # Latitude, Longitude for location
 # Stockholm

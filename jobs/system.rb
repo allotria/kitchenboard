@@ -25,7 +25,6 @@ SCHEDULER.every '10m', :first_in => 0 do |job|
   ips = %x[ hostname -I ]
   ips = 'blargh' unless ips.chomp!
   sysText = "environment = #{env}; IP = #{ips}"
-  puts sysText
-  send_event('systemText', { 'text': "#{sysText}"})
+  send_event('systemText', "{ 'text': #{sysText}}")
   # send_event('systemText', "{ 'text': #{ips} }")
 end

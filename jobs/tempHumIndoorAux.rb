@@ -1,6 +1,6 @@
 # Tellprox API key
 tellprox_api_key = KitchenKeys::TELLPROX_API_KEY
-tellprox_sensor_id = "111"
+tellprox_sensor_id = "83"
 
 # Populate the multi-graph with some initial points
 tempValues = []
@@ -13,8 +13,9 @@ last_x = tempValues.last[:x]
 SCHEDULER.every '1m', :first_in => 0 do |job|
 
   if settings.environment == 'development'
-    send_event('drinnenHum', current: 60)
+    send_event('drinnenHum', current: 15)
     send_event('drinnenTemp', points: tempValues)
+
   else
     http = Net::HTTP.new("localhost", 8080)
     http.use_ssl = false
@@ -40,8 +41,8 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
     last_x += 1
     tempValues << {x: last_x, y: temp} # this is where you'd add a data element for graph 1
     # send_event('tempHum1', points: [tempValues, humValues])
-    send_event('drinnenHum', current: hum.to_f)
-    send_event('drinnenTemp', points: tempValues)
+    send_event('auxHum', current: hum.to_f)
+    send_event('auxTemp', points: tempValues)
   end
 end
 
