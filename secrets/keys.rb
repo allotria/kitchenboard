@@ -1,7 +1,0 @@
-class KitchenKeys
-
-  TELLPROX_API_KEY = 'a8e23d31f9caa5fc6e4cd0872f923a86'
-  FORECAST_API_KEY = '910a008072d229929fc84e8d5857b099'
-
-end
-
