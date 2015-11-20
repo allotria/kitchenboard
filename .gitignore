@@ -3,4 +3,5 @@ history.yml
 
 .idea
 
+/secrets
 Gemfile.lock
